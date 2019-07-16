@@ -1,4 +1,6 @@
-A library for integrating against Garmin Connect from Dart.
+# garmin_connect
+
+A Dart library for integrating against Garmin Connect.
 
 Garmin Connect does not provide a modern and public API. This tool is simulating a browser, and manually logs into the Garmin website to scrape activities. Use at your own risk.
 
