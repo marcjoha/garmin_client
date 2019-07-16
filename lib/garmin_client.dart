@@ -3,8 +3,6 @@ import 'dart:io';
 import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
 
-// todo: förbered för paketering (logging? dokumentering?)
-
 class GarminException implements Exception {
   String message;
   GarminException(this.message);
