@@ -1,7 +1,8 @@
 name: garmin_client
 description: Dart library for exporting data from Garmin Connect
-# version: 1.0.0
-# author: Marcus Johansson <majohansson@gmail.com>
+version: 1.0.0
+author: Marcus Johansson <majohansson@gmail.com>
+homepage: https://github.com/marcjoha/garmin_client
 
 environment:
   sdk: '>=2.2.0 <3.0.0'
