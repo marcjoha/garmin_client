@@ -14,8 +14,8 @@ A simple usage example:
 import 'package:garmin_client/garmin_client.dart';
 
 main() {
-    var garmin_client = GarminClient(MY_USERNAME, MY_PASSWORD);
-    await garmin_client.connect();
+  var garmin_client = GarminClient(MY_USERNAME, MY_PASSWORD);
+  await garmin_client.connect();
 
   // Gets a list of all activity ids, sorted in reverse chronological order
   var activities = await garmin_client.list_activities();
