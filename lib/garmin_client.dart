@@ -13,9 +13,9 @@ class GarminClient {
   String username;
   String password;
 
-  Dio dio = null;
+  Dio dio;
 
-  GarminClient(String this.username, String this.password);
+  GarminClient(this.username, this.password);
 
   Future<void> connect() async {
     dio = Dio();

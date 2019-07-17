@@ -1,3 +1,7 @@
+## 1.0.1
+
+- Tiny fixes reporterd in static analysis
+
 ## 1.0.0
 
 - Initial version. List and get activities. Edits and new uploads are currently not supported.
