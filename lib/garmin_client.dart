@@ -97,19 +97,37 @@ class GarminClient {
   }
 
   Future<Map<String, dynamic>> get_activity_summary(int activity_id) async {
-    Response response = await dio.get('https://connect.garmin.com/modern/proxy/activity-service/activity/$activity_id');
-    if (response.statusCode != 200) {
-      throw GarminException('Failed to summary for activity $activity_id');
+    Response response;
+    bool hadException = false;
+
+    try {
+      response = await dio.get('https://connect.garmin.com/modern/proxy/activity-service/activity/$activity_id');
+    } on DioError {
+      hadException = true;
     }
+
+    if (hadException || response.statusCode != 200) {
+      throw GarminException('Failed to get summary for activity $activity_id');
+    }
+
     return response.data;
   }
 
   Future<Map<String, dynamic>> get_activity_details(int activity_id) async {
-    Response response =
-        await dio.get('https://connect.garmin.com/modern/proxy/activity-service/activity/$activity_id/details');
-    if (response.statusCode != 200) {
-      throw GarminException('Failed to details for activity $activity_id');
+    Response response;
+    bool hadException = false;
+
+    try {
+      response =
+          await dio.get('https://connect.garmin.com/modern/proxy/activity-service/activity/$activity_id/details');
+    } on DioError {
+      hadException = true;
     }
+
+    if (hadException || response.statusCode != 200) {
+      throw GarminException('Failed to get details for activity $activity_id');
+    }
+
     return response.data;
   }
 }
