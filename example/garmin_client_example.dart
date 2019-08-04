@@ -20,5 +20,5 @@ main(List<String> arguments) async {
   // var latest_details = await garmin_client.get_activity_details(activities.first);
 
   // Gets a list of all cycling activity (any Garmin activity type accepted)
-  //var cycling_activities = await garmin_client.list_activities('cycling');
+  // var cycling_activities = await garmin_client.list_activities('cycling');
 }
