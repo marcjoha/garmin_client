@@ -1,3 +1,7 @@
+## 1.0.2
+
+- Better exception handling
+
 ## 1.0.1
 
 - Tiny fixes reporterd in static analysis
