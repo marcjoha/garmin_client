@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Added supporting for getting laps
+
 ## 1.0.2
 
 - Better exception handling
