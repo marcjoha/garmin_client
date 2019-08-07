@@ -139,18 +139,36 @@ class GarminClient {
     return response.data;
   }
 
-  Future<Map<String, dynamic>> get_activity_laps(int activity_id) async {
+  Future<Map<String, dynamic>> get_activity_splits(int activity_id) async {
     Response response;
     bool hadException = false;
 
     try {
-      response = await dio.get('https://connect.garmin.com/modern/proxy/activity-service/activity/$activity_id/laps');
+      response = await dio.get('https://connect.garmin.com/modern/proxy/activity-service/activity/$activity_id/splits');
     } on DioError {
       hadException = true;
     }
 
     if (hadException || response.statusCode != 200) {
-      throw GarminException('Failed to get laps for activity $activity_id');
+      throw GarminException('Failed to get splits for activity $activity_id');
+    }
+
+    return response.data;
+  }
+
+  Future<List<dynamic>> get_activity_hr_zones(int activity_id) async {
+    Response response;
+    bool hadException = false;
+
+    try {
+      response =
+          await dio.get('https://connect.garmin.com/modern/proxy/activity-service/activity/$activity_id/hrTimeInZones');
+    } on DioError {
+      hadException = true;
+    }
+
+    if (hadException || response.statusCode != 200) {
+      throw GarminException('Failed to get heart rate zones for activity $activity_id');
     }
 
     return response.data;

@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Support for extracting heart rate zones from activities
+
 ## 1.0.4
 
 - Automatic retries in case of network failures (up to 3 times with 5 seconds delay)
