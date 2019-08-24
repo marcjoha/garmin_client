@@ -24,8 +24,8 @@ class GarminClient {
       ..interceptors.add(RetryInterceptor(
           dio: dio,
           options: RetryOptions(
-            retries: 3,
-            retryInterval: Duration(seconds: 5),
+            retries: 5,
+            retryInterval: Duration(seconds: 10),
           )));
 
     await _authenticate();
